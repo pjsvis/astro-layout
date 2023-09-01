@@ -1,0 +1,17 @@
+@import "https://unpkg.com/open-props";
+
+.flex {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-center {
+  justify-content: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
