@@ -14,7 +14,7 @@ let visibleModal = null;
 
 
 // Toggle modal
-const toggleModal = event => {
+export const toggleModal = event => {
   event.preventDefault();
   const modal = document.getElementById(event.currentTarget.getAttribute('data-target'));
   (typeof(modal) != 'undefined' && modal != null)
@@ -22,12 +22,12 @@ const toggleModal = event => {
 }
 
 // Is modal open
-const isModalOpen = modal => {
+export const isModalOpen = modal => {
   return modal.hasAttribute('open') && modal.getAttribute('open') != 'false' ? true : false;
 }
 
 // Open modal
-const openModal = modal => {
+export const openModal = modal => {
   if (isScrollbarVisible()) {
     document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`);
   }
@@ -40,7 +40,7 @@ const openModal = modal => {
 }
 
 // Close modal
-const closeModal = modal => {
+export const closeModal = modal => {
   visibleModal = null;
   document.documentElement.classList.add(closingClass);
   setTimeout(() => {
@@ -67,7 +67,7 @@ document.addEventListener('keydown', event => {
 });
 
 // Get scrollbar width
-const getScrollbarWidth = () => {
+export const getScrollbarWidth = () => {
 
   // Creating invisible container
   const outer = document.createElement('div');
@@ -90,6 +90,6 @@ const getScrollbarWidth = () => {
 }
 
 // Is scrollbar visible
-const isScrollbarVisible = () => {
+export const isScrollbarVisible = () => {
   return document.body.scrollHeight > screen.height;
 }

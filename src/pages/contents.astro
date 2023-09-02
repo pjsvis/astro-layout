@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/PicoLayout.astro';
 import Card from '../components/Card.astro';
 ---
 
@@ -7,24 +7,20 @@ import Card from '../components/Card.astro';
 	<main>
 	
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-	
+		<p class="instructions">
+			This is the contents page.
+		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="pico-docs/"
+				href="pico-docs/index"
 				title="Pico Docs"
 				body="Pico documentation ❤️"
 			/>
 			<Card
-				href="pico-docs/accordions"
-				title="Accordionss"
-				body="Pico accordions docs ❤️"
+				href="/"
+				title="Astro Startup"
+				body="Asto startup page ❤️"
 			/>
-			<Card
-			href="contents"
-			title="Pico Contents"
-			body="Pico documentation contents ❤️"
-		/>
-		
 		</ul>
 	</main>
 </Layout>

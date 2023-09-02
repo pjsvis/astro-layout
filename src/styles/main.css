@@ -1,0 +1,12 @@
+@import "https://unpkg.com/open-props";
+@import "./pico.css";
+@import "./nw-main.css";
+@import "./nw-utils.css";
+
+/* TODO: Figure out where this came from and why we didn't get it for accordions */
+[role=document]{
+    width: 800px;
+    margin: auto;
+}
+
+

@@ -5,7 +5,7 @@
  * Copyright 2019-2023 - Licensed under MIT
  */
 
-const grid = {
+export const grid = {
   
   // Config
   buttons: {
