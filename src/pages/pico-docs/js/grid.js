@@ -66,7 +66,7 @@ export const grid = {
     // Config
     let htmlInner = '';
     let codeInner = '&lt;<b>div</b> <i>class</i>=<u>"grid"</u>&gt;\n';
-
+--font-size
     // Build
     for (let col = 0; col < this.grid.current; col++) {
       htmlInner += '<div>' + (col + 1) + '</div>';

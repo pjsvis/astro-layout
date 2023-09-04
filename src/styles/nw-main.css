@@ -26,84 +26,14 @@
     --form-label-font-weight: var(--font-weight);
     --transition: 0.2s ease-in-out;
     --modal-overlay-backdrop-filter: blur(0.25rem);
+
+    /* Additional props */
+    --size-content-4: 70ch;
+    --size-content-5: 90ch;
+    --flow-space: 1em;
   }
 
-
-  @media (min-width: 576px) {
-    :root {
-      --font-size: var(--font-size-1);
-    }
-  }
-  @media (min-width: 768px) {
-    :root {
-      --font-size: var(--font-size-1);
-    }
-  }
-  @media (min-width: 992px) {
-    :root {
-      --font-size: var(--font-size-1);
-    }
-  }
-  @media (min-width: 1200px) {
-    :root {
-      --font-size: var(--font-size-1);
-    }
-  }
-  
-  @media (min-width: 576px) {
-    body > header,
-    body > main,
-    body > footer,
-    section {
-      --block-spacing-vertical: calc(var(--spacing) * 2.5);
-    }
-  }
-  @media (min-width: 768px) {
-    body > header,
-    body > main,
-    body > footer,
-    section {
-      --block-spacing-vertical: calc(var(--spacing) * 3);
-    }
-  }
-  @media (min-width: 992px) {
-    body > header,
-    body > main,
-    body > footer,
-    section {
-      --block-spacing-vertical: calc(var(--spacing) * 3.5);
-    }
-  }
-  @media (min-width: 1200px) {
-    body > header,
-    body > main,
-    body > footer,
-    section {
-      --block-spacing-vertical: calc(var(--spacing) * 4);
-    }
-  }
-  
-  @media (min-width: 576px) {
-    article {
-      --block-spacing-horizontal: calc(var(--spacing) * 1.25);
-    }
-  }
-  @media (min-width: 768px) {
-    article {
-      --block-spacing-horizontal: calc(var(--spacing) * 1.5);
-    }
-  }
-  @media (min-width: 992px) {
-    article {
-      --block-spacing-horizontal: calc(var(--spacing) * 1.75);
-    }
-  }
-  @media (min-width: 1200px) {
-    article {
-      --block-spacing-horizontal: calc(var(--spacing) * 2);
-    }
-  }
-  
+  /* TODO: Do we need this */
   dialog > article {
     --block-spacing-vertical: calc(var(--spacing) * 2);
     --block-spacing-horizontal: var(--spacing);
@@ -522,7 +452,86 @@
   [type=checkbox],
   [type=radio],
   [type=range] {
-    accent-color: var(--primary);
+    color: var(--primary);
   }
   
+
+  /* TODO: Rework media queries using https://open-props.style/#media-queries */
+/* TODO: Once open-proped move to another location */
+
+@media (min-width: 576px) {
+  :root {
+    --font-size: var(--font-size-1);
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --font-size: var(--font-size-1);
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --font-size: var(--font-size-1);
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --font-size: var(--font-size-1);
+  }
+}
+
+@media (min-width: 576px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 2.5);
+  }
+}
+@media (min-width: 768px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 3);
+  }
+}
+@media (min-width: 992px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 3.5);
+  }
+}
+@media (min-width: 1200px) {
+  body > header,
+  body > main,
+  body > footer,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 4);
+  }
+}
+
+@media (min-width: 576px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 1.25);
+  }
+}
+@media (min-width: 768px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 1.5);
+  }
+}
+@media (min-width: 992px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 1.75);
+  }
+}
+@media (min-width: 1200px) {
+  article {
+    --block-spacing-horizontal: calc(var(--spacing) * 2);
+  }
+}
+
   /*# sourceMappingURL=default.css.map */

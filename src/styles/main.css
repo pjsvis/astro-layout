@@ -5,7 +5,7 @@
 
 /* TODO: Figure out where this came from and why we didn't get it for accordions */
 [role=document]{
-    width: 800px;
+    width: var(--size-content-5);
     margin: auto;
 }
 

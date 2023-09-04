@@ -1,5 +1,10 @@
 @import "https://unpkg.com/open-props";
 
+/* 
+Ref: https://cube.fyi/
+Ref: https://andy-bell.co.uk/cube-css/
+ */
+
 .flex {
   display: flex;
   gap: var(--space-2);
@@ -14,4 +19,57 @@
 
 .flex-end {
   justify-content: flex-end;
+}
+
+/* 
+<article class="card">
+  <img class="card__image" alt="" />
+  <div class="[ card__content ] [ flow ]">
+    <!-- our content in here will auto-flow now -->
+  </div>
+</article>
+TODO: Get flow-space value(s) from open-props
+*/
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* 
+provides a consistent max width, padded container that sits in the middle 
+of the viewport when the viewport is greater than 60rem wide.
+ */
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 60rem;
+}
+
+.pill {
+  display: inline-block;
+  padding-inline:0.7rem;
+  padding-block: 0.3rem;;
+  font-size: get-size('400');
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  background: var(--red-5);
+  border-radius: var(--radius-3);
+
+
+  /* &:not([class*='bg-']) {
+    background: get-color('grey');
+  } */
+
+
+  /* [lang*='en'] & {
+    text-transform: capitalize;
+  } */
+}
+
+.pill:not([class*='bg-']) {
+  background: get-color('grey');
+}
+.pill[lang*='en'] & {
+  text-transform: capitalize;
 }
